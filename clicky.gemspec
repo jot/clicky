@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "clicky"
   
   s.add_runtime_dependency('httparty', '~> 0.7.4')
-  s.add_runtime_dependency('active_support', '> 2.3.8')
+  s.add_runtime_dependency('activesupport', '> 2.3.8')
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
