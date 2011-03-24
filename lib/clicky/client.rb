@@ -1,12 +1,20 @@
 require 'httparty'
 
 module Clicky
-  module Log
+  class Client
     include HTTParty
     
-    base_uri Configuration.endpoint
-    default_params {:site_id => Configuration.site_id,
-                    :sitekey_admin => Configuration.sitekey_admin}
+    attr_accessor *Configuration::VALID_OPTIONS_KEYS
+
+    def initialize(options={})
+      options = Clicky.options.merge(options)
+      Configuration::VALID_OPTIONS_KEYS.each do |key|
+        send("#{key}=", options[key])
+      end
+      
+      self.class.base_uri self.endpoint
+      self.class.default_params :site_id => self.site_id, :sitekey_admin => self.sitekey_admin
+    end
     
     def self.page_view(request)
       request(:page_view, request)
