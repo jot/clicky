@@ -6,11 +6,11 @@ Gem::Specification.new do |s|
   s.name        = "clicky"
   s.version     = Clicky::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
+  s.authors     = ["Federico Gonzalez"]
+  s.email       = ["federico@boost.co.nz"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Easy access to the Clicky log API}
+  s.description = %q{Manually create a event on the clicky service through the log API}
 
   s.rubyforge_project = "clicky"
   
