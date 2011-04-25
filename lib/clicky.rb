@@ -1,11 +1,8 @@
-require 'active_support/core_ext'
+# require 'active_support/core_ext'
+require 'clicky/configuration'
 require 'clicky/client'
 
 module Clicky
   extend Configuration
-  
-  def self.endpoint
-    "http://in.getclicky.com/in.php"
-  end
-  
+
 end
